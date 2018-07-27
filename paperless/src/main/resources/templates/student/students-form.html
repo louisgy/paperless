@@ -1,0 +1,113 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://getbootstrap.com/docs/4.0/examples/sign-in/signin.css">
+
+
+<title>Paperless Testing</title>
+</head>
+<body>
+
+	<div class="container">
+		<form action="#" th:action="@{/register-students}"
+			th:object="${studentsdto}" method="post">
+			<table>
+				<tr>
+					<td>Username :</td>
+					<td><input type="text" th:field="*{userName}" /></td>
+					<td th:if="${#fields.hasErrors('userName')}"
+						th:errors="*{userName}">userName Error</td>
+				</tr>
+				<tr>
+					<td>First Name:</td>
+					<td><input type="text" th:field="*{firstName}" /></td>
+					<td th:if="${#fields.hasErrors('firstName')}"
+						th:errors="*{firstName}">firstName Error</td>
+				</tr>
+				<tr>
+					<td>Last Name :</td>
+					<td><input type="text" th:field="*{lastName}" /></td>
+					<td th:if="${#fields.hasErrors('lastName')}"
+						th:errors="*{lastName}">LastName Error</td>
+				</tr>
+				<tr>
+					<td>Domain :</td>
+					<td><input type="text" th:field="*{domain}" /></td>
+					<td th:if="${#fields.hasErrors('domain')}" th:errors="*{domain}">Domain
+						Error</td>
+				</tr>
+				<tr>
+					<td>Email :</td>
+					<td><input type="email" th:field="*{email}" /></td>
+					<td th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email
+						Error</td>
+				</tr>
+				<tr>
+					<td>Password :</td>
+					<td><input type="password" th:field="*{password}" /></td>
+					<td th:if="${#fields.hasErrors('password')}"
+						th:errors="*{password}">Pass Error</td>
+				</tr>
+				<tr>
+					<td>Conf. Password :</td>
+					<td><input type="password" th:field="*{confirmPassword}" /></td>
+					<td th:if="${#fields.hasErrors('confirmPassword')}"
+						th:errors="*{confirmPassword}">Pass Error</td>
+				</tr>
+				<tr>
+					<td>Sex :</td>
+					<td><select th:field="*{sex}">
+							<option value="female">Female</option>
+							<option value="male">Male</option>
+							<option value="other">other</option>
+							<option value="no disclosure" selected>no disclosure</option>
+					</select></td>
+					<td th:if="${#fields.hasErrors('sex')}" th:errors="*{sex}">sex
+						Error</td>
+				</tr>
+				<tr>
+					<td>DOB :</td>
+					<td><input type="date" th:field="*{dob}" /></td>
+					<td th:if="${#fields.hasErrors('dob')}" th:errors="*{dob}">DOB
+						Error</td>
+
+				</tr>
+				<tr>
+					<td>Grade :</td>
+					<td><input type="text" th:field="*{grade}" /></td>
+					<td th:if="${#fields.hasErrors('grade')}" th:errors="*{grade}">Grade
+						Error</td>
+				</tr>
+				<tr>
+					<td><button type="submit">Submit</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+</body>
+</html>

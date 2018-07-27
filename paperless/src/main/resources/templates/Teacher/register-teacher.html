@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Register Teacher</h1>
+	<form action="#" th:action="@{/register-teacher}"
+		th:object="${Teacher}" method="post">
+		<p>
+			First Name: <input type="text" th:field="*{firstName}"
+				placeholder="firstname" />
+		</p>
+		<p>
+			Last Name: <input type="text" th:field="*{lastName}"
+				placeholder="last name" />
+		</p>
+		<p>
+			password: <input type="password" th:field="*{password}"
+				placeholder="password" />
+		</p>
+		<p>
+			Email: <input type="email" th:field="*{email}" placeholder="email" />
+		</p>
+		<p>
+			Expertise: <input type="text" th:field="*{expertise}"
+				placeholder="Mathematics" />
+		</p>
+
+
+
+		<p>
+			<input type="submit" value="Submit" /> <input type="reset"
+				value="Reset" />
+		</p>
+	</form>
+</body>
+</html>
