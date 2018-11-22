@@ -1,32 +1,32 @@
-//package com.ueh.paperless.validator;
-//
-//import org.passay.*;
-//import org.passay.dictionary.WordListDictionary;
-//import org.passay.dictionary.WordLists;
-//import org.passay.dictionary.sort.ArraysSort;
-//
-//import javax.validation.ConstraintValidator;
-//import javax.validation.ConstraintValidatorContext;
-//import java.io.FileReader;
-//import java.io.IOException;
-//import java.util.Arrays;
-//import java.util.List;
-//import java.util.stream.Collectors;
-////import java.io.FileReader;
-////import java.io.IOException;
-////import java.util.Arrays;
-////import java.util.List;
-////import java.util.stream.Collectors;
-////
-////import javax.validation.ConstraintValidator;
-////import javax.validation.ConstraintValidatorContext;
-////
-//import org.passay.CharacterRule;
-////import org.passay.DictionaryRule;
-////import org.passay.EnglishCharacterData;
-////import org.passay.LengthRule;
-////import org.passay.PasswordData;
-////import org.passay.PasswordValidator;
+package com.ueh.paperless.validator;
+
+import org.passay.*;
+import org.passay.dictionary.WordListDictionary;
+import org.passay.dictionary.WordLists;
+import org.passay.dictionary.sort.ArraysSort;
+
+import javax.validation.ConstraintValidator;
+import javax.validation.ConstraintValidatorContext;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import javax.validation.ConstraintValidator;
+import javax.validation.ConstraintValidatorContext;
+
+import org.passay.CharacterRule;
+import org.passay.DictionaryRule;
+import org.passay.EnglishCharacterData;
+import org.passay.LengthRule;
+import org.passay.PasswordData;
+import org.passay.PasswordValidator;
 import org.passay.RuleResult;
 import org.passay.WhitespaceRule;
 import org.passay.dictionary.WordListDictionary;
